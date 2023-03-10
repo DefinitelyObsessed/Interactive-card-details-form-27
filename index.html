@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Project #27</title>
+
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+
+
+  <!-- Main Block  -->
+  <main>
+
+    <!-- Semi-Main-One-Block -->
+    <div class="semi-main-one">
+      <picture>
+        <source media="(max-width: 499px)" srcset="images/bg-main-mobile.png">
+        <source media="(min-width: 500px)" srcset="images/bg-main-desktop.png">
+        <img src="images/bg-main-mobile.png" alt="bg-main-mobile">
+      </picture>
+    </div>
+
+
+    <!-- Semi-Main-Two-block -->
+    <div class="semi-main-two">
+
+
+      <!-- Cards-Block -->
+      <div class="cards-block">
+        <div class="card-back">
+          <img class="card-back-img" src="images/bg-card-back.png" alt="bg-card-back">
+          <div class="card-back-text">
+            <h1 class="output-cvc">000</h1>
+          </div>
+        </div>
+
+        <div class="card-front">
+          <img class="card-front-img" src="images/bg-card-front.png" alt="bg-card-front">
+
+          <div class="card-front-text">
+            <img src="images/card-logo.svg" alt="card-logo">
+            <h2 class="output-number">0000 0000 0000 0000</h2>
+
+            <div class="card-front-name-date">
+              <p class="output-name"> Jane Appleseed</p>
+
+              <div class="card-front-date">
+                <p class="output-month">00</p>
+                <p>/</p>
+                <p class="output-year">00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Text-Block -->
+      <div class="text-block">
+
+        <!-- Form-Block -->
+        <form id="form" class="" method="get">
+
+          <div class="form-name">
+            <label for="input-name"> Cardholder Name</label>
+            <input type="text" name="input-name" class="input-name " maxlength="18" placeholder="e.g. Jane Appleseed">
+            <small class="name-sm"></small>
+          </div>
+
+          <div class="form-number">
+            <label for="input-number">Card Number</label>
+            <input type="text" name="input-number" class="input-number" minlength="16" maxlength="16" placeholder="e.g. 1234 5678 9123 0000">
+            <small class="number-sm"></small>
+          </div>
+
+          <div class="form-date-cvc">
+
+            <div class="form-date">
+              <label for="input-month"> Exp. Date (MM/YY)</label>
+
+              <div class="form-mth-yr">
+                <input type="text" name="input-month" class="input-month" maxlength="2" placeholder="MM">
+                <input type="text" name="input-year" class="input-year" maxlength="2" placeholder="YY">
+              </div>
+
+              <small class="date-sm"></small>
+            </div>
+
+            <div class="form-cvc">
+              <label for="input-cvc">CVC</label>
+              <input type="text" name="input-cvc" class="input-cvc" placeholder="e.g. 123" maxlength="8">
+              <small class="cvc-sm"></small>
+            </div>
+          </div>
+
+
+          <button class="btn-submit" type="submit" id="submit-btn"> Confirm</button>
+
+        </form>
+
+
+        <!-- Thank-Block -->
+        <div class="thank-block ">
+          <div class="semi-thank-block">
+
+            <img class="thank-img" src="images/icon-complete.svg" alt="icon-complete">
+
+            <div class="thank-text">
+              <h3>Thank you!</h3>
+              <h4>We've added your card details</h4>
+            </div>
+
+            <button type="reset" id="continue-btn">Continue</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <!-- Javascript -->
+  <script src="script.js"></script>
+
+
+</body>
+
+</html>

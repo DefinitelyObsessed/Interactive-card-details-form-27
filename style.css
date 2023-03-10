@@ -1,0 +1,625 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500&display=swap');
+
+/* Roots */
+:root {
+  --clr-input-border-violet: hsl(249, 99%, 64%);
+  --clr-input-border-purple: hsl(278, 94%, 30%);
+  --clr-error: hsl(0, 100%, 66%);
+  --clr-font-body-white: hsl(0, 0%, 100%);
+  --clr-border-grey: hsl(270, 3%, 87%);
+  --clr-grey: hsl(279, 6%, 55%);
+  --clr-hover-button: hsl(278, 46%, 26%);
+  --clr-button: hsl(278, 68%, 11%);
+  --ff-body: 'Space Grotesk', sans-serif;
+  --fs-h1-p: 0.65rem;
+  --fs-h2: 1.15rem;
+  --fs-input-btn-h4: 1.125rem;
+  --fs-label: 0.75rem;
+  --fs-h3: 1.8rem;
+  --fs-small: 0.70rem;
+  --fw-500: 500;
+  --fw-400: 400;
+}
+
+/* Similar Parts */
+*, body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--clr-font-body-white);
+  font-family: var(--ff-body);
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.semi-main-one, .semi-main-two, .text-block {
+  max-width: 100vw;
+}
+
+picture img, .cards-block img {
+  width: 100%;
+}
+
+.card-front-name-date, .card-front-date, .form-name, .form-number, .form-cvc, .form-date-cvc, .form-mth-yr {
+  display: flex;
+}
+
+form, form input, .semi-thank-block {
+  width: 90vw;
+}
+
+h1, h2, p, form label, .thank-block h3 {
+  letter-spacing: 2px;
+}
+
+h1, h2, p, .thank-block h4 {
+  font-weight: var(--fw-400);
+}
+
+form label, .thank-block h3 {
+  text-transform: uppercase;
+}
+
+form label, form input, button, .thank-block h3, form small {
+  font-weight: var(--fw-500);
+}
+
+form input, button {
+  border-radius: 10px;
+  font-family: var(--ff-body);
+  font-size: var(--fs-input-btn-h4);
+  padding: 0.8rem;
+}
+
+/* Main Block */
+main {
+  max-width: 100vw;
+}
+
+/* Semi-Main-One-Block */
+.semi-main-one {
+  height: 15rem;
+}
+
+picture, picture img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* Cards-Block */
+.cards-block {
+  color: var(--clr-font-body-white);
+}
+
+.card-back, .card-front {
+  max-width: 18rem;
+}
+
+.card-back img, .card-front-img {
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+h1, p {
+  font-size: var(--fs-h1-p);
+}
+
+.card-back {
+  right: 5vw;
+  position: absolute;
+  top: 2.5rem;
+}
+
+.cards-block h1 {
+  right: 10vw;
+  position: absolute;
+  top: 4.3rem;
+}
+
+.card-front {
+  position: absolute;
+  left: 5vw;
+  top: 8.2rem;
+}
+
+.card-front-text {
+  margin: 0 auto;
+  max-width: 16rem;
+  position: relative;
+  top: -9rem;
+}
+
+.card-front-text img {
+  width: 25%;
+}
+
+.cards-block h2 {
+  font-size: var(--fs-h2);
+  margin: 1.8rem 0 1rem 0;
+}
+
+.card-front-name-date {
+  justify-content: space-between;
+}
+
+.cards-block p {
+  text-transform: uppercase;
+}
+
+/* Form-Block */
+form {
+  left: 50%;
+  margin-top: 15rem;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+form label {
+  font-size: var(--fs-label);
+}
+
+form input {
+  border: solid 1px var(--clr-border-grey);
+  color: black;
+  margin: 0.3rem 0;
+}
+
+form input::placeholder {
+  color: var(--clr-border-grey);
+}
+
+form small {
+  color: var(--clr-error);
+  font-size: var(--fs-small);
+  margin: 0 0 3vh 10px;
+}
+
+.form-name, .form-number, .form-cvc {
+  flex-direction: column;
+}
+
+.form-mth-yr input {
+  margin-right: 2vw;
+  width: 20vw;
+}
+
+.form-cvc {
+  margin-top: 0.4rem;
+}
+
+.form-cvc input {
+  width: 46vw;
+}
+
+button {
+  background-color: var(--clr-button);
+  border-style: none;
+  color: var(--clr-font-body-white);
+  cursor: pointer;
+  margin-bottom: 4rem;
+  width: 100%;
+}
+
+/* Thank-Block */
+.thank-block {
+  align-items: center;
+  background-color: var(--clr-font-body-white);
+  display: flex;
+  height: 70vh;
+  justify-content: center;
+  margin-top: 2rem;
+  transform: translateX(-100vw);
+  position: absolute;
+  transition: transform 500ms ease;
+  width: 100vw;
+}
+
+.semi-thank-block {
+  gap: 1rem;
+  text-align: center;
+}
+
+.semi-thank-block img {
+  width: 5rem;
+}
+
+.semi-thank-block img, .thank-text {
+  margin-bottom: 2rem;
+}
+
+.thank-block h3 {
+  font-size: var(--fs-h3);
+  margin-bottom: 1rem;
+}
+
+.thank-block h4 {
+  font-size: var(--fs-input-btn-h4);
+  color: var(--clr-grey);
+}
+
+/* Hover Section */
+input, button {
+  transition: 300ms ease;
+}
+
+input {
+  transition-property: border-image;
+}
+
+input:hover {
+  border-image: linear-gradient(to left, var(--clr-input-border-purple), var(--clr-input-border-violet)) 10;
+}
+
+button {
+  transition-property: background-color, transform;
+}
+
+button:hover {
+  box-shadow: var(--clr-button) 1.95px 1.95px 2.6px;
+  background-color: var(--clr-hover-button);
+  transform: scaleY(1.05);
+}
+
+/* Javascript Section (ERROR) */
+input.error {
+  border-color: var(--clr-error);
+}
+
+/* Javascript Section (Thank-You Appear)*/
+.card-front {
+  z-index: 20;
+}
+
+.form-hide {
+  z-index: -10;
+}
+
+.thank-block-show {
+  transform: translateX(0);
+  z-index: 10;
+}
+
+/* Responsiveness Section */
+@media (max-width:325px) {
+  .card-back, .card-front {
+    max-width: 15rem;
+  }
+
+  .cards-block h1 {
+    top: 3.5rem;
+  }
+
+  .card-front-text {
+    max-width: 13rem;
+    top: -7.5rem;
+  }
+
+  .cards-block h2 {
+    margin: 1rem 0 0.5rem 0;
+  }
+
+  form input {
+    margin: 0.3rem 0;
+  }
+
+  form small {
+    margin: 0 0 1rem 10px;
+  }
+
+  .form-date-cvc {
+    flex-direction: column;
+  }
+
+  .thank-block {
+    margin-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  :root {
+    --fs-h2: 0.8rem;
+  }
+}
+
+@media (min-width:600px) {
+  .semi-main-one {
+    height: 50vh;
+  }
+
+  .card-back, .card-front {
+    max-width: 26rem;
+  }
+
+  .card-back {
+    right: 15vw;
+    top: 3.5rem;
+  }
+
+  .cards-block h1 {
+    top: 6.5rem;
+  }
+
+  .card-front {
+    left: 15vw;
+    top: 12rem;
+  }
+
+  .card-front-text {
+    max-width: 22rem;
+    top: -13rem;
+  }
+
+  .cards-block h2 {
+    margin: 2.8rem 0 1.4rem 0;
+  }
+
+  form {
+    transform: translate(-50%, 25%);
+    margin-top: 12rem;
+  }
+
+  form, form input, .semi-thank-block {
+    width: 60vw;
+  }
+
+  .form-mth-yr input {
+    margin-right: 2vw;
+    width: 13vw;
+  }
+
+  .form-cvc {
+    margin-top: 0.4rem;
+  }
+
+  .form-cvc input {
+    width: 30vw;
+  }
+
+  .thank-block {
+    margin-top: 10rem;
+    height: 40rem;
+  }
+
+  .semi-thank-block img, .thank-text {
+    margin-bottom: 3rem;
+  }
+
+  :root {
+    --fs-h1-p: 0.85rem;
+    --fs-h2: 1.65rem;
+    --fs-input-btn-h4: 1.225rem;
+    --fs-h3: 1.9rem;
+  }
+}
+
+@media (min-width:1200px) {
+  body {
+    overflow: hidden;
+  }
+
+  main {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-areas: 'A B B';
+  }
+
+  .semi-main-one {
+    grid-area: A;
+    height: 100%;
+    min-height: 150vh;
+  }
+
+  .semi-main-two {
+    display: grid;
+    gap: 10vw;
+    grid-auto-columns: 1fr;
+    grid-template-areas: 'C D';
+    grid-area: B;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -30%);
+    width: 80vw;
+  }
+
+  .cards-block {
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-template-areas:
+      'F'
+      'E';
+    grid-area: C;
+  }
+
+  .card-back, .card-front, form {
+    position: relative;
+  }
+
+  .text-block {
+    grid-area: D;
+  }
+
+  .card-back {
+    grid-area: E;
+    top: 0;
+    transform: translate(15%, -35%);
+    right: 0;
+  }
+
+  .cards-block h1 {
+    right: 5vw;
+  }
+
+  .card-front {
+    grid-area: F;
+    top: 0;
+    left: 0;
+  }
+
+  .thank-block {
+    max-height: 100vh;
+    margin-top: 0;
+    right: 6.5vw;
+    top: 0;
+    width: 36%;
+  }
+
+  .thank-block button {
+    margin-bottom: 10rem;
+  }
+
+  form {
+    width: 50%;
+    margin-top: 4rem;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+  }
+
+  form, form input {
+    width: 28vw;
+  }
+
+  form input {
+    margin: 0.4rem 0;
+  }
+
+  form small {
+    margin: 0 0 1.8rem 10px;
+  }
+
+  .form-mth-yr input {
+    margin-right: 1vw;
+    width: 7vw;
+  }
+
+  .form-cvc input {
+    width: 12vw;
+  }
+}
+
+@media (min-width:1800px) {
+  .card-back, .card-front {
+    max-width: 36rem;
+  }
+
+  .cards-block h1 {
+    top: 9rem;
+  }
+
+  .card-front-text {
+    max-width: 30rem;
+    top: -17.5rem;
+  }
+
+  .cards-block h2 {
+    margin: 4.5rem 0 1.8rem 0;
+  }
+
+  form {
+    margin-top: 5rem;
+  }
+
+  form input {
+    margin: 0.6rem 0;
+  }
+
+  form small {
+    margin: 0 0 2.5rem 10px;
+  }
+
+  form input, button {
+    padding: 1.2rem;
+  }
+
+  .thank-block {
+    margin-top: 1rem;
+  }
+
+  .thank-block button {
+    margin-bottom: 0;
+  }
+
+  .semi-thank-block img {
+    width: 7rem;
+  }
+
+  .semi-thank-block img, .thank-text {
+    margin-bottom: 4rem;
+  }
+
+  .thank-block h3 {
+    margin-bottom: 2rem;
+  }
+
+  :root {
+    --fs-h1-p: 1.25rem;
+    --fs-h2: 2.45rem;
+    --fs-input-btn-h4: 1.825rem;
+    --fs-label: 1.05rem;
+    --fs-h3: 2.5rem;
+    --fs-small: 0.95rem;
+  }
+}
+
+@media (min-width:2300px) {
+  .card-back, .card-front {
+    max-width: 46rem;
+  }
+
+  .cards-block h1 {
+    top: 11rem;
+  }
+
+  .card-front-text {
+    max-width: 38rem;
+    top: -22.5rem;
+  }
+
+  .cards-block h2 {
+    margin: 6rem 0 2.2rem 0;
+  }
+
+  form input {
+    margin: 0.8rem 0;
+  }
+
+  form small {
+    margin: 0 0 3rem 20px;
+  }
+
+  form input, button {
+    padding: 1.6rem;
+  }
+
+  .thank-block {
+    height: 100%;
+    margin-top: 0;
+  }
+
+  .thank-block button {
+    margin-bottom: 28rem;
+  }
+
+  .semi-thank-block img {
+    width: 10rem;
+  }
+
+  .semi-thank-block img, .thank-text {
+    margin-bottom: 6rem;
+  }
+
+  :root {
+    --fs-h1-p: 1.85rem;
+    --fs-h2: 3.05rem;
+    --fs-input-btn-h4: 2.325rem;
+    --fs-label: 1.45rem;
+    --fs-h3: 3.5rem;
+    --fs-small: 1.30rem;
+  }
+}
