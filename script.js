@@ -20,6 +20,12 @@ const smallCvc = document.querySelector(".cvc-sm");
 const thankMessage = document.querySelector(".thank-block");
 const continueButton = document.querySelector("#continue-btn");
 
+var inputNumMask = {
+  mask: '**** **** **** ****'
+};
+
+var mask = IMask(inputNum, inputNumMask);
+
 const nameRegEx = /^[a-zA-Z ]*$/;
 const numRegEx = /^[0-9]+$/;
 
@@ -37,15 +43,7 @@ inputName.addEventListener("keyup", () => {
 });
 
 inputNum.addEventListener("keyup", () => {
-
-  var firstNum = String(inputNum.value).slice(0, 4);
-  var secondNum = String(inputNum.value).slice(4, 8);
-  var thirdNum = String(inputNum.value).slice(8, 12);
-  var fourthNum = String(inputNum.value).slice(12, 16);
-
-  var number = firstNum + "  " + secondNum + "  " + thirdNum + "  " + fourthNum;
-
-  cardNum.innerText = number;
+  cardNum.innerText = mask.value ;
 });
 
 inputMth.addEventListener("keyup", () => {
