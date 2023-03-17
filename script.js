@@ -27,7 +27,7 @@ var inputNumMask = {
 var mask = IMask(inputNum, inputNumMask);
 
 const nameRegEx = /^[a-zA-Z ]*$/;
-const numRegEx = /^[0-9]+$/;
+const numRegEx = /^[0-9 ]+$/;
 
 const nameError = [
   'Cannot be blank',
